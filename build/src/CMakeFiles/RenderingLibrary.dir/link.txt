@@ -1,0 +1,2 @@
+/usr/bin/ar qc libRenderingLibrary.a CMakeFiles/RenderingLibrary.dir/RenderWindow.cpp.o
+/usr/bin/ranlib libRenderingLibrary.a

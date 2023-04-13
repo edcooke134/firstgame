@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /home/edc/dev/projects/cpp/games/firstgame/bin Select CMakeLists.txt
