@@ -14,7 +14,6 @@ GLuint gVertexArrayObject = 0;
 // VBO's store info relating to specifically vertices (e.g. position, normals, textures). These are our mechanisms for
 // arranging geometry on the GPU.
 GLuint gVertexBufferObject = 0;
-GLuint gVertexBufferObject2 = 0;
 
 // ID for the program object for shaders ( graphics pipeline)
 GLuint gGraphicsPipelineShaderProgram = 0;
@@ -81,23 +80,18 @@ void App::init() {
 
 void App::vertexSpecification() {
     // cpu setup
-    const std::vector<GLfloat> vertexPositions {
+    const std::vector<GLfloat> vertexData {
         // openGL co-ordinate system is [-1, 1]
         // x     y     z
         -0.8f, -0.8f, 0.0f,  // vertex 1
+        1.0f, 0.0f, 0.0f,    // color 1
         0.8f, -0.8f, 0.0f,   // vertex 2
-        0.0f, 0.8f, 0.0f     // vertex 3
-    };
-    const std::vector<GLfloat> vertexColors {
-            // rgb system is [0, 1]
-            // r     g     b
-            1.0f, 0.0f, 0.0f,  // vertex 1
-            0.0f, 1.0f, 0.0f,  // vertex 2
-            0.0f, 0.0f, 1.0f   // vertex 3
+        0.0f, 1.0f, 0.0f,    // color 2
+        0.0f, 0.8f, 0.0f,     // vertex 3
+        0.0f, 0.0f, 1.0f     // color 3
     };
 
     // gpu setup
-
     glGenVertexArrays(1, &gVertexArrayObject);
     glBindVertexArray(gVertexArrayObject);
 
@@ -105,36 +99,30 @@ void App::vertexSpecification() {
     glGenBuffers(1, &gVertexBufferObject);
     glBindBuffer(GL_ARRAY_BUFFER, gVertexBufferObject); // we must specify what target we bind too
     glBufferData(GL_ARRAY_BUFFER,
-                 vertexPositions.size() * sizeof(GLfloat),
-                 vertexPositions.data(),
+                 vertexData.size() * sizeof(GLfloat),
+                 vertexData.data(),
                  GL_STATIC_DRAW
                  );
 
     // this attribute array will tell openGL how our data is organised
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0,                // Attribute 0 corresponds to the enabled glEnableVertexAttribArray
+    glVertexAttribPointer(0,                            // Attribute 0 corresponds to the enabled glEnableVertexAttribArray
                           3,
-                          GL_FLOAT,         // type
-                          GL_FALSE,         // is the data normalised
-                          0,                // stride
-                          (void*)0          // offset
+                          GL_FLOAT,                     // type
+                          GL_FALSE,                     // is the data normalised
+                          sizeof(GL_FLOAT) *6,          // stride (iterate incr, but from the start of the nth and the
+                                                        // start of the n+1th, in this case it is 6 floats: [x,y,z,r,g,b],x,y,z)
+                          (GLvoid*)0                    // offset (needs to be of type GLvoid*)
                           );
 
-    glGenBuffers(1, &gVertexBufferObject2);
-    glBindBuffer(GL_ARRAY_BUFFER, gVertexBufferObject2); // we must specify what target we bind too
-    glBufferData(GL_ARRAY_BUFFER,
-                 vertexColors.size() * sizeof(GLfloat),
-                 vertexColors.data(),
-                 GL_STATIC_DRAW
-    );
-
     glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1,                // Attribute 1 corresponds to the enabled glEnableVertexAttribArray
+    glVertexAttribPointer(1,                            // Attribute 1 corresponds to the enabled glEnableVertexAttribArray
                           3,
-                          GL_FLOAT,         // type
-                          GL_FALSE,         // is the data normalised
-                          0,                // stride
-                          (void*)0          // offset
+                          GL_FLOAT,                     // type
+                          GL_FALSE,                     // is the data normalised
+                          sizeof(GL_FLOAT) *6,          // stride (iterate incr, but from the start of the nth and the
+                                                        // start of the n+1th, in this case it is 6 floats: [x,y,z,r,g,b],x,y,z)
+                          (GLvoid*)(sizeof(GL_FLOAT)*3)   // offset (needs to be of type GLvoid*)
                           );
     // cleanup
     glBindVertexArray(0);
