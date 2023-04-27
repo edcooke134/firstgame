@@ -116,82 +116,6 @@ depend:
 	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-src/CMakeFiles/RenderingLibrary.dir/rule:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/RenderingLibrary.dir/rule
-.PHONY : src/CMakeFiles/RenderingLibrary.dir/rule
-
-# Convenience name for target.
-RenderingLibrary: src/CMakeFiles/RenderingLibrary.dir/rule
-.PHONY : RenderingLibrary
-
-# fast build rule for target.
-RenderingLibrary/fast:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/build
-.PHONY : RenderingLibrary/fast
-
-# Convenience name for target.
-src/CMakeFiles/EntityLibrary.dir/rule:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/EntityLibrary.dir/rule
-.PHONY : src/CMakeFiles/EntityLibrary.dir/rule
-
-# Convenience name for target.
-EntityLibrary: src/CMakeFiles/EntityLibrary.dir/rule
-.PHONY : EntityLibrary
-
-# fast build rule for target.
-EntityLibrary/fast:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/build
-.PHONY : EntityLibrary/fast
-
-Entity.o: Entity.cpp.o
-.PHONY : Entity.o
-
-# target to build an object file
-Entity.cpp.o:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/Entity.cpp.o
-.PHONY : Entity.cpp.o
-
-Entity.i: Entity.cpp.i
-.PHONY : Entity.i
-
-# target to preprocess a source file
-Entity.cpp.i:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/Entity.cpp.i
-.PHONY : Entity.cpp.i
-
-Entity.s: Entity.cpp.s
-.PHONY : Entity.s
-
-# target to generate assembly for a file
-Entity.cpp.s:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/Entity.cpp.s
-.PHONY : Entity.cpp.s
-
-RenderWindow.o: RenderWindow.cpp.o
-.PHONY : RenderWindow.o
-
-# target to build an object file
-RenderWindow.cpp.o:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/RenderWindow.cpp.o
-.PHONY : RenderWindow.cpp.o
-
-RenderWindow.i: RenderWindow.cpp.i
-.PHONY : RenderWindow.i
-
-# target to preprocess a source file
-RenderWindow.cpp.i:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/RenderWindow.cpp.i
-.PHONY : RenderWindow.cpp.i
-
-RenderWindow.s: RenderWindow.cpp.s
-.PHONY : RenderWindow.s
-
-# target to generate assembly for a file
-RenderWindow.cpp.s:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/RenderWindow.cpp.s
-.PHONY : RenderWindow.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,14 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... EntityLibrary"
-	@echo "... RenderingLibrary"
-	@echo "... Entity.o"
-	@echo "... Entity.i"
-	@echo "... Entity.s"
-	@echo "... RenderWindow.o"
-	@echo "... RenderWindow.i"
-	@echo "... RenderWindow.s"
 .PHONY : help
 
 

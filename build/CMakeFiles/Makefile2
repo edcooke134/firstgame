@@ -64,19 +64,19 @@ CMAKE_BINARY_DIR = /home/edc/dev/projects/cpp/games/firstgame/build
 
 # The main recursive "all" target.
 all: src/all
-all: resources/all
+all: thirdparty/glad/all
 all: apps/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
-preinstall: resources/preinstall
+preinstall: thirdparty/glad/preinstall
 preinstall: apps/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: src/clean
-clean: resources/clean
+clean: thirdparty/glad/clean
 clean: apps/clean
 .PHONY : clean
 
@@ -96,95 +96,123 @@ apps/clean: apps/CMakeFiles/TheGame.dir/clean
 .PHONY : apps/clean
 
 #=============================================================================
-# Directory level rules for directory resources
-
-# Recursive "all" directory target.
-resources/all:
-.PHONY : resources/all
-
-# Recursive "preinstall" directory target.
-resources/preinstall:
-.PHONY : resources/preinstall
-
-# Recursive "clean" directory target.
-resources/clean:
-.PHONY : resources/clean
-
-#=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all: src/CMakeFiles/RenderingLibrary.dir/all
-src/all: src/CMakeFiles/EntityLibrary.dir/all
+src/all: src/App/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
-src/preinstall:
+src/preinstall: src/App/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/CMakeFiles/RenderingLibrary.dir/clean
-src/clean: src/CMakeFiles/EntityLibrary.dir/clean
+src/clean: src/App/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/RenderingLibrary.dir
+# Directory level rules for directory src/App
 
-# All Build rule for target.
-src/CMakeFiles/RenderingLibrary.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=3,4 "Built target RenderingLibrary"
-.PHONY : src/CMakeFiles/RenderingLibrary.dir/all
+# Recursive "all" directory target.
+src/App/all: src/App/CMakeFiles/AppLibrary.dir/all
+.PHONY : src/App/all
 
-# Build rule for subdir invocation for target.
-src/CMakeFiles/RenderingLibrary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/RenderingLibrary.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/RenderingLibrary.dir/rule
+# Recursive "preinstall" directory target.
+src/App/preinstall:
+.PHONY : src/App/preinstall
 
-# Convenience name for target.
-RenderingLibrary: src/CMakeFiles/RenderingLibrary.dir/rule
-.PHONY : RenderingLibrary
-
-# clean rule for target.
-src/CMakeFiles/RenderingLibrary.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/clean
-.PHONY : src/CMakeFiles/RenderingLibrary.dir/clean
+# Recursive "clean" directory target.
+src/App/clean: src/App/CMakeFiles/AppLibrary.dir/clean
+.PHONY : src/App/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/EntityLibrary.dir
+# Directory level rules for directory thirdparty/glad
+
+# Recursive "all" directory target.
+thirdparty/glad/all: thirdparty/glad/src/all
+.PHONY : thirdparty/glad/all
+
+# Recursive "preinstall" directory target.
+thirdparty/glad/preinstall: thirdparty/glad/src/preinstall
+.PHONY : thirdparty/glad/preinstall
+
+# Recursive "clean" directory target.
+thirdparty/glad/clean: thirdparty/glad/src/clean
+.PHONY : thirdparty/glad/clean
+
+#=============================================================================
+# Directory level rules for directory thirdparty/glad/src
+
+# Recursive "all" directory target.
+thirdparty/glad/src/all: thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all
+.PHONY : thirdparty/glad/src/all
+
+# Recursive "preinstall" directory target.
+thirdparty/glad/src/preinstall:
+.PHONY : thirdparty/glad/src/preinstall
+
+# Recursive "clean" directory target.
+thirdparty/glad/src/clean: thirdparty/glad/src/CMakeFiles/GladLibrary.dir/clean
+.PHONY : thirdparty/glad/src/clean
+
+#=============================================================================
+# Target rules for target src/App/CMakeFiles/AppLibrary.dir
 
 # All Build rule for target.
-src/CMakeFiles/EntityLibrary.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=1,2 "Built target EntityLibrary"
-.PHONY : src/CMakeFiles/EntityLibrary.dir/all
+src/App/CMakeFiles/AppLibrary.dir/all: thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all
+	$(MAKE) $(MAKESILENT) -f src/App/CMakeFiles/AppLibrary.dir/build.make src/App/CMakeFiles/AppLibrary.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/App/CMakeFiles/AppLibrary.dir/build.make src/App/CMakeFiles/AppLibrary.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=1,2 "Built target AppLibrary"
+.PHONY : src/App/CMakeFiles/AppLibrary.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/EntityLibrary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/EntityLibrary.dir/all
+src/App/CMakeFiles/AppLibrary.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/App/CMakeFiles/AppLibrary.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/EntityLibrary.dir/rule
+.PHONY : src/App/CMakeFiles/AppLibrary.dir/rule
 
 # Convenience name for target.
-EntityLibrary: src/CMakeFiles/EntityLibrary.dir/rule
-.PHONY : EntityLibrary
+AppLibrary: src/App/CMakeFiles/AppLibrary.dir/rule
+.PHONY : AppLibrary
 
 # clean rule for target.
-src/CMakeFiles/EntityLibrary.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/clean
-.PHONY : src/CMakeFiles/EntityLibrary.dir/clean
+src/App/CMakeFiles/AppLibrary.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/App/CMakeFiles/AppLibrary.dir/build.make src/App/CMakeFiles/AppLibrary.dir/clean
+.PHONY : src/App/CMakeFiles/AppLibrary.dir/clean
+
+#=============================================================================
+# Target rules for target thirdparty/glad/src/CMakeFiles/GladLibrary.dir
+
+# All Build rule for target.
+thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all:
+	$(MAKE) $(MAKESILENT) -f thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build.make thirdparty/glad/src/CMakeFiles/GladLibrary.dir/depend
+	$(MAKE) $(MAKESILENT) -f thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build.make thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=3,4 "Built target GladLibrary"
+.PHONY : thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all
+
+# Build rule for subdir invocation for target.
+thirdparty/glad/src/CMakeFiles/GladLibrary.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles 0
+.PHONY : thirdparty/glad/src/CMakeFiles/GladLibrary.dir/rule
+
+# Convenience name for target.
+GladLibrary: thirdparty/glad/src/CMakeFiles/GladLibrary.dir/rule
+.PHONY : GladLibrary
+
+# clean rule for target.
+thirdparty/glad/src/CMakeFiles/GladLibrary.dir/clean:
+	$(MAKE) $(MAKESILENT) -f thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build.make thirdparty/glad/src/CMakeFiles/GladLibrary.dir/clean
+.PHONY : thirdparty/glad/src/CMakeFiles/GladLibrary.dir/clean
 
 #=============================================================================
 # Target rules for target apps/CMakeFiles/TheGame.dir
 
 # All Build rule for target.
-apps/CMakeFiles/TheGame.dir/all: src/CMakeFiles/RenderingLibrary.dir/all
-apps/CMakeFiles/TheGame.dir/all: src/CMakeFiles/EntityLibrary.dir/all
+apps/CMakeFiles/TheGame.dir/all: src/App/CMakeFiles/AppLibrary.dir/all
+apps/CMakeFiles/TheGame.dir/all: thirdparty/glad/src/CMakeFiles/GladLibrary.dir/all
 	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=5,6 "Built target TheGame"

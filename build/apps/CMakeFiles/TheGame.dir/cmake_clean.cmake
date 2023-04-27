@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TheGame.dir/app.cpp.o"
-  "CMakeFiles/TheGame.dir/app.cpp.o.d"
+  "CMakeFiles/TheGame.dir/main.cpp.o"
+  "CMakeFiles/TheGame.dir/main.cpp.o.d"
   "TheGame"
   "TheGame.pdb"
 )

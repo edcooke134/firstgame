@@ -117,30 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RenderingLibrary
+# Target rules for targets named AppLibrary
 
 # Build rule for target.
-RenderingLibrary: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RenderingLibrary
-.PHONY : RenderingLibrary
+AppLibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppLibrary
+.PHONY : AppLibrary
 
 # fast build rule for target.
-RenderingLibrary/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RenderingLibrary.dir/build.make src/CMakeFiles/RenderingLibrary.dir/build
-.PHONY : RenderingLibrary/fast
+AppLibrary/fast:
+	$(MAKE) $(MAKESILENT) -f src/App/CMakeFiles/AppLibrary.dir/build.make src/App/CMakeFiles/AppLibrary.dir/build
+.PHONY : AppLibrary/fast
 
 #=============================================================================
-# Target rules for targets named EntityLibrary
+# Target rules for targets named GladLibrary
 
 # Build rule for target.
-EntityLibrary: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EntityLibrary
-.PHONY : EntityLibrary
+GladLibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GladLibrary
+.PHONY : GladLibrary
 
 # fast build rule for target.
-EntityLibrary/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/EntityLibrary.dir/build.make src/CMakeFiles/EntityLibrary.dir/build
-.PHONY : EntityLibrary/fast
+GladLibrary/fast:
+	$(MAKE) $(MAKESILENT) -f thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build.make thirdparty/glad/src/CMakeFiles/GladLibrary.dir/build
+.PHONY : GladLibrary/fast
 
 #=============================================================================
 # Target rules for targets named TheGame
@@ -163,8 +163,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... EntityLibrary"
-	@echo "... RenderingLibrary"
+	@echo "... AppLibrary"
+	@echo "... GladLibrary"
 	@echo "... TheGame"
 .PHONY : help
 

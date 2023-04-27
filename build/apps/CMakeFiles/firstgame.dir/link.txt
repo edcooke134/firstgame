@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/firstgame.dir/app.cpp.o -o firstgame  ../src/libRenderLib.a -lSDL2 -lSDL2_image -lSDL2 -lSDL2_image 

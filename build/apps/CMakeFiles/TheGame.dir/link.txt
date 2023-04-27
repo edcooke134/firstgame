@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/TheGame.dir/app.cpp.o -o TheGame  ../src/libRenderingLibrary.a ../src/libEntityLibrary.a -lSDL2 -lSDL2_image -lSDL2 -lSDL2_image 
+/usr/bin/c++ CMakeFiles/TheGame.dir/main.cpp.o -o TheGame  ../src/App/libAppLibrary.a ../thirdparty/glad/src/libGladLibrary.a -lSDL2 -lSDL2_image -lSDL2 -lSDL2_image 

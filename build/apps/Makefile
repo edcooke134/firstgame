@@ -130,29 +130,29 @@ TheGame/fast:
 	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/build
 .PHONY : TheGame/fast
 
-app.o: app.cpp.o
-.PHONY : app.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-app.cpp.o:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/app.cpp.o
-.PHONY : app.cpp.o
+main.cpp.o:
+	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-app.i: app.cpp.i
-.PHONY : app.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-app.cpp.i:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/app.cpp.i
-.PHONY : app.cpp.i
+main.cpp.i:
+	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-app.s: app.cpp.s
-.PHONY : app.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-app.cpp.s:
-	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/app.cpp.s
-.PHONY : app.cpp.s
+main.cpp.s:
+	cd /home/edc/dev/projects/cpp/games/firstgame/build && $(MAKE) $(MAKESILENT) -f apps/CMakeFiles/TheGame.dir/build.make apps/CMakeFiles/TheGame.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TheGame"
-	@echo "... app.o"
-	@echo "... app.i"
-	@echo "... app.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

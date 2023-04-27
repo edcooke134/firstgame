@@ -69,31 +69,31 @@ include apps/CMakeFiles/TheGame.dir/progress.make
 # Include the compile flags for this target's objects.
 include apps/CMakeFiles/TheGame.dir/flags.make
 
-apps/CMakeFiles/TheGame.dir/app.cpp.o: apps/CMakeFiles/TheGame.dir/flags.make
-apps/CMakeFiles/TheGame.dir/app.cpp.o: ../apps/app.cpp
-apps/CMakeFiles/TheGame.dir/app.cpp.o: apps/CMakeFiles/TheGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/CMakeFiles/TheGame.dir/app.cpp.o"
-	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT apps/CMakeFiles/TheGame.dir/app.cpp.o -MF CMakeFiles/TheGame.dir/app.cpp.o.d -o CMakeFiles/TheGame.dir/app.cpp.o -c /home/edc/dev/projects/cpp/games/firstgame/apps/app.cpp
+apps/CMakeFiles/TheGame.dir/main.cpp.o: apps/CMakeFiles/TheGame.dir/flags.make
+apps/CMakeFiles/TheGame.dir/main.cpp.o: ../apps/main.cpp
+apps/CMakeFiles/TheGame.dir/main.cpp.o: apps/CMakeFiles/TheGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/CMakeFiles/TheGame.dir/main.cpp.o"
+	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT apps/CMakeFiles/TheGame.dir/main.cpp.o -MF CMakeFiles/TheGame.dir/main.cpp.o.d -o CMakeFiles/TheGame.dir/main.cpp.o -c /home/edc/dev/projects/cpp/games/firstgame/apps/main.cpp
 
-apps/CMakeFiles/TheGame.dir/app.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TheGame.dir/app.cpp.i"
-	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edc/dev/projects/cpp/games/firstgame/apps/app.cpp > CMakeFiles/TheGame.dir/app.cpp.i
+apps/CMakeFiles/TheGame.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TheGame.dir/main.cpp.i"
+	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edc/dev/projects/cpp/games/firstgame/apps/main.cpp > CMakeFiles/TheGame.dir/main.cpp.i
 
-apps/CMakeFiles/TheGame.dir/app.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TheGame.dir/app.cpp.s"
-	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edc/dev/projects/cpp/games/firstgame/apps/app.cpp -o CMakeFiles/TheGame.dir/app.cpp.s
+apps/CMakeFiles/TheGame.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TheGame.dir/main.cpp.s"
+	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edc/dev/projects/cpp/games/firstgame/apps/main.cpp -o CMakeFiles/TheGame.dir/main.cpp.s
 
 # Object files for target TheGame
 TheGame_OBJECTS = \
-"CMakeFiles/TheGame.dir/app.cpp.o"
+"CMakeFiles/TheGame.dir/main.cpp.o"
 
 # External object files for target TheGame
 TheGame_EXTERNAL_OBJECTS =
 
-apps/TheGame: apps/CMakeFiles/TheGame.dir/app.cpp.o
+apps/TheGame: apps/CMakeFiles/TheGame.dir/main.cpp.o
 apps/TheGame: apps/CMakeFiles/TheGame.dir/build.make
-apps/TheGame: src/libRenderingLibrary.a
-apps/TheGame: src/libEntityLibrary.a
+apps/TheGame: src/App/libAppLibrary.a
+apps/TheGame: thirdparty/glad/src/libGladLibrary.a
 apps/TheGame: apps/CMakeFiles/TheGame.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edc/dev/projects/cpp/games/firstgame/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TheGame"
 	cd /home/edc/dev/projects/cpp/games/firstgame/build/apps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TheGame.dir/link.txt --verbose=$(VERBOSE)
